@@ -11,7 +11,7 @@ int number = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите значение степени, в которую будем возводить заданное Вами число:  ");
 int degree = Convert.ToInt32(Console.ReadLine());
 
-void exponentiation (int degree, int number)
+void Exponentiation (int degree, int number)
 {
     int result = number;
     for (int i=1; i<degree;i++)
@@ -21,4 +21,4 @@ void exponentiation (int degree, int number)
 Console.WriteLine($"Возведем {number} в степень {degree}, получаем = {result}");
 }
  
-exponentiation (degree, number);
+Exponentiation (degree, number);
