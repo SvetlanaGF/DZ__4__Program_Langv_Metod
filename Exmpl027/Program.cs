@@ -9,7 +9,7 @@ Console.WriteLine("Задача 27: Найдем сумму цифр в зада
 Console.Write("Введите число: ");
 string number = Console.ReadLine();
 
-void Summirovanie (string number)
+void Summation (string number)
 {int summ = 0;
    for (int i=0;i<number.Length;i++)
     {
@@ -17,4 +17,4 @@ void Summirovanie (string number)
     }
   Console.WriteLine($"Сумма цифр в числе {number} равняется {summ}");
 }
-Summirovanie (number);
+Summation (number);
