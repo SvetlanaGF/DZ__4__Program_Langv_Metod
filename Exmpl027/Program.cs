@@ -7,16 +7,14 @@
 Console.Clear();
 Console.WriteLine("Задача 27: Найдем сумму цифр в заданном числе.");
 Console.Write("Введите число: ");
-//Console.WriteLine();
-int summ = 0; 
-string number = Convert.ToString(Console.ReadLine());
-//Console.WriteLine($"Введенное число состоит из {number.Length} символов");
+string number = Console.ReadLine();
 
+void Summirovanie (string number)
+{int summ = 0;
    for (int i=0;i<number.Length;i++)
     {
       summ = summ + int.Parse(number[i].ToString());
-      //Console.WriteLine($"Переменная array равняется {number[i]}");
-      //Console.WriteLine($"Переменная Сумма равняется {summ}");
     }
-
-Console.WriteLine($"Сумма цифр в числе {number} равняется {summ}");
+  Console.WriteLine($"Сумма цифр в числе {number} равняется {summ}");
+}
+Summirovanie (number);
