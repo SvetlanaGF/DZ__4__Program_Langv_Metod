@@ -9,23 +9,32 @@ Console.Write("Введите количество элементов масси
 int N = int.Parse(Console.ReadLine());
 Console.WriteLine($"В нашем массиве будет {N} элементов.");
 
-int [] array = new int [N];
+int [] arr = new int [N];
 
 // Получим элементы массива
-for (int i=0;i<array.Length; i++)
+void InputArray (int [] array)
 {
-    Console.Write($"Введите {i}-й элемент массива:  ");
-    array[i] = int.Parse(Console.ReadLine());
+    for (int i=0;i<array.Length; i++)
+    {
+        Console.Write($"Введите {i}-й элемент массива:  ");
+        array[i] = int.Parse(Console.ReadLine());
+    }
 }
+InputArray (arr);
 
-Console.WriteLine($"Получен массив из {array.Length} элементов.");
-Console.Write($"[ ");
-for (int i=0;i<array.Length;i++)
-{
-Console.Write($"{array[i]}");
-if (i<(array.Length-1))
-{
-        Console.Write(", ");
+// Выведем элементы массива на экран
+
+void OutputArray (int[] array)
+{  
+    Console.WriteLine($"Получен массив из {array.Length} элементов.");
+    Console.Write($"[ ");
+    int count = array.Length;
+
+    for (int i=0; i<count; i++)
+    {
+        Console.Write($"{array[i]}");
+        if (i<(count-1)) Console.Write(", ");
+    }
+    Console.Write(" ]");
 }
-}
-Console.Write(" ]");
+OutputArray (arr);
